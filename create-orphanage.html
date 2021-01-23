@@ -62,26 +62,31 @@
 
             <div class="input-block">
               <label for="name">Nome</label>
-              <input id="name" name="name" type="text" />
+              <input id="name" name="name" type="text" required/>
             </div>
 
             <div class="input-block">
               <label for="about"
                 >Sobre <span>Máximo 300 caracteres</span></label
               >
-              <textarea name="about" id="about"></textarea>
+              <textarea name="about" id="about" required></textarea>
             </div>
 
             <div class="input-block">
               <label for="whatsapp">Número de WhatsApp</label>
-              <input id="whatsapp" name="whatsapp" type="text" />
+              <input id="whatsapp" name="whatsapp" type="text" required/>
             </div>
 
             <div class="input-block images">
               <label for="images">Foto</label>
 
               <div class="images-upload" id="images">
-                <input name="images" placeholder="Cole o link da foto aqui" />
+
+                <div class="new-upload">                  
+                  <input name="images" placeholder="Cole o link da foto aqui" required/>
+                  <span><img src="./public/images/remove-file.svg" alt="Remover foto"></span>
+                </div>
+
               </div>
               <button type="button">
                 <img
@@ -97,12 +102,12 @@
 
             <div class="input-block">
               <label for="instructions">Instruções</label>
-              <textarea name="instructions" id="instructions"></textarea>
+              <textarea name="instructions" id="instructions" required></textarea>
             </div>
 
             <div class="input-block">
               <label for="opening_hours">Horário das visitas</label>
-              <input id="opening_hours" name="opening_hours" type="text" />
+              <input id="opening_hours" name="opening_hours" type="text" required/>
             </div>
 
             <div class="input-block">
@@ -112,6 +117,7 @@
                 id="open_on_weekends"
                 name="open_on_weekends"
                 value="1"
+                required
               />
 
               <div class="button-select">

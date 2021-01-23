@@ -41,6 +41,16 @@
     cursor: pointer;
 }
 
+.button-select button.active {
+    background: #edfff6;
+    border: 1px solid #a1e9c5;
+    color: #37c77f;
+}
+
 .button-select button:first-child {
     border-radius: 2rem 0 0 2rem;
+}
+
+.button-select button:last-child {
+    border-radius: 0 2rem 2rem 0;
 }
