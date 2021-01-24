@@ -1,0 +1,20 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cangaceiro15/Happy---NLW--3-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cangaceiro15/Happy---NLW--3-Project/issues"
+  },
+  "homepage": "https://github.com/Cangaceiro15/Happy---NLW--3-Project#readme"
+}
