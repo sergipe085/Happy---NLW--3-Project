@@ -14,13 +14,29 @@ const icon = L.icon({
     popupAnchor: [170, 2],
 });
 
-const popup = L.popup({
-    closeButton: false,
-    className: "map-popup",
-    minWidth: 240,
-    minHeight: 240,
-}).setContent('Lar da meninas <a href="/orphanage?id=1" class = "choose-orphanage"> <img src="/images/arrow-white.svg"> </a>');
+function addMarker({ id, name, lat, lng }) {
+    //criar popup
+    const popup = L.popup({
+        closeButton: false,
+        className: "map-popup",
+        minWidth: 240,
+        minHeight: 240,
+    }).setContent(`${name} <a href="/orphanage?id=${id}"> <img src="/images/arrow-white.svg"> </a>`);
 
-//criar e adicionar marcador
-L.marker([-3.776416,-38.5335929], { icon: icon }).addTo(map)
+    //criar e adicionar marcador
+    L.marker([lat, lng], { icon: icon })
+    .addTo(map)
     .bindPopup(popup)
+}
+
+const orphanagesSpan = document.querySelectorAll('.orphanages span');
+orphanagesSpan.forEach((span) => {
+    const orphanage = {
+        id : span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat, 
+        lng: span.dataset.lng
+    }
+
+    addMarker(orphanage);
+})

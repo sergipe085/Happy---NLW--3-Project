@@ -78,3 +78,15 @@ function toggleSelect(event) {
     console.log(input.value)
 }
 
+function validate(event) {
+
+
+    const inputLat = document.querySelector('.inputLat');
+    const inputLng = document.querySelector('.inputLng');
+
+    if (inputLat.value == "" || inputLng.value == "") {
+        event.preventDefault();
+        alert('Escolha o local do orfanato no mapa!')
+    }
+}
+
